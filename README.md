@@ -1,5 +1,7 @@
 # OurToken Solidity Project
 
+![Tests badge](https://github.com/gervaiscodes/cyfrin-foundry-erc-20/actions/workflows/test.yml/badge.svg)
+
 ## Overview
 
 This project implements an ERC20 token called `OurToken` using Solidity. It includes the token contract, deployment scripts, and test scripts using Foundry.
