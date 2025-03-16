@@ -1,66 +1,66 @@
-## Foundry
+# OurToken Solidity Project
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Overview
 
-Foundry consists of:
+This project implements an ERC20 token called `OurToken` using Solidity. It includes the token contract, deployment scripts, and test scripts using Foundry.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Project Structure
 
-## Documentation
+- `OurToken.sol`: The main ERC20 token contract.
+- `ManualToken.sol`: A manually managed token contract.
+- `DeployOurToken.s.sol`: A Solidity script for deploying `OurToken`.
+- `OutTokenTest.t.sol`: Test cases for `OurToken`.
+- `Makefile`: Contains commands for building and testing the project.
+- `foundry.toml`: Foundry configuration file.
 
-https://book.getfoundry.sh/
+## Prerequisites
 
-## Usage
+- [Foundry](https://github.com/foundry-rs/foundry) installed on your system.
+- A Solidity-compatible development environment.
 
-### Build
+## Setup
 
-```shell
-$ forge build
+1. Clone the repository:
+
+```sh
+git clone <repo-url>
+cd <repo-folder>
 ```
 
-### Test
+2. Install dependencies:
 
-```shell
-$ forge test
+```sh
+forge install
 ```
 
-### Format
+3. Build the project:
 
-```shell
-$ forge fmt
+```sh
+forge build
 ```
 
-### Gas Snapshots
+## Running Tests
 
-```shell
-$ forge snapshot
+To run tests using Foundry:
+
+```sh
+forge test
 ```
 
-### Anvil
+## Deployment
 
-```shell
-$ anvil
+To deploy `OurToken`, use the deployment script:
+
+```sh
+forge script script/DeployOurToken.s.sol --broadcast --rpc-url <RPC_URL>
 ```
 
-### Deploy
+Replace `<RPC_URL>` with your network RPC endpoint.
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## Configuration
 
-### Cast
+The `foundry.toml` file contains configurations for the Foundry framework. Modify this file to change compilation output directories, library remappings, and other settings.
 
-```shell
-$ cast <subcommand>
-```
+## License
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This project is licensed under the MIT License.
